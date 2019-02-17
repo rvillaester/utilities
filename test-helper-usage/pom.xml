@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<groupId>rcv.util.test.helper</groupId>
+	<artifactId>test-helper-usage</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+    <name>Test Helper Usage</name>
+    
+    <properties>
+		<source.version>1.8</source.version>
+		<maven-compiler.version>3.5.1</maven-compiler.version>
+        <maven-plugin.version>2.22.0</maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   	</properties>
+
+    <dependencies>
+		<dependency>
+			<groupId>rcv.util.test.helper</groupId>
+			<artifactId>test-helper</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-plugin.version}</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+					<source>${source.version}</source>
+					<target>${source.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	
+</project>
